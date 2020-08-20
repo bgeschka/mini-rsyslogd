@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		while (1) {
 			int nread = read(clientsock, buf, BUFSIZ-1);
 			if(nread < -1) exit(0);
-			syslog(LOG_INFO, "%s", buf);
+			if(nread != 0 && buf[0] != '\0') syslog(LOG_INFO, "%s", buf);
 			memset(buf, 0, BUFSIZ-1);
 		}
 	}
