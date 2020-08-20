@@ -1,0 +1,11 @@
+[Unit]
+	After=network.target
+[Service]
+	User=root
+	StandardOutput=journal
+	StandardError=journal
+	RemainAfterExit=true
+	ExecStart=/usr/bin/mini-rsyslogd 514 0.0.0.0
+[Install]
+	WantedBy=default.target
+
