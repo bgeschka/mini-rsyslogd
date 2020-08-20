@@ -17,6 +17,8 @@ install(){
 ----------------------------------------------------------------
 the systemd service file ist the config, there are only two args
             /etc/systemd/system/mini-rsyslogd.service           
+            sudo systemctl start mini-rsyslogd.service           
+            sudo systemctl enable mini-rsyslogd.service           
 ----------------------------------------------------------------
 EOF
 }
